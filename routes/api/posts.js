@@ -29,3 +29,23 @@ router.get('/:id', (req, res) => {
             res.status(404).json({ nopostfound: 'No post found with that ID' })
         );
 });
+
+router.post('/',
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+      const { errors, isValid } = validatePostInput(req.body);
+  
+      if (!isValid) {
+        return res.status(400).json(errors);
+      }
+  
+      const newPost = new Post({
+        body: req.body.body,
+        user: req.user.id
+      });
+  
+      newPost.save().then(post => res.json(post));
+    }
+  );
+
+  module.exports = router;
