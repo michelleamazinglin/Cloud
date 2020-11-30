@@ -15,3 +15,5 @@ class MainPage extends React.Component {
 }
 
 export default MainPage;
+
+//this is a comment
