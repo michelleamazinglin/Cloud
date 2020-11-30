@@ -14,10 +14,12 @@ mongoose
   .catch(err => console.log(err));
 
 
-app.use("/api/users", users);
+  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.json());
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+  app.use("/api/users", users);
+
+
 
 app.get("/", (req, res) => res.send("Hello World, welcome to the cloud"));
 const port = process.env.PORT || 5000;
