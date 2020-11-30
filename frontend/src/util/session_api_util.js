@@ -1,31 +1,18 @@
-import { RECEIVE_CURRENT_USER, 
-         RECEIVE_USER_LOGOUT, 
-         RECEIVE_USER_SIGN_IN } from '../actions/session_actions';
+import axios from 'axios';
 
-const initialState = {
-  isAuthenticated: false,
-  user: {}
+// We've been using this method in previos steps
+export const setAuthToken = token => {
+  if (token) {
+    axios.defaults.headers.common['Authorization'] = token;
+  } else {
+    delete axios.defaults.headers.common['Authorization'];
+  }
 };
 
-export default function(state = initialState, action) {
-  switch (action.type) {
-    case RECEIVE_CURRENT_USER:
-      return {
-        ...state,
-        isAuthenticated: !!action.currentUser,
-        user: action.currentUser
-      };
-    case RECEIVE_USER_LOGOUT:
-      return {
-        isAuthenticated: false,
-        user: undefined
-      };
-    case RECEIVE_USER_SIGN_IN:
-      return {
-        ...state,
-        isSignedIn: true
-      }
-    default:
-      return state;
-  }
-}
+export const signup = (userData) => {
+  return axios.post('/api/users/register', userData);
+};
+
+export const login = (userData) => {
+  return axios.post('/api/users/login', userData);
+};
