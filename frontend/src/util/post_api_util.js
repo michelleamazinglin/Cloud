@@ -9,5 +9,5 @@ export const getUserPosts = id => {
 };
 
 export const writePost = data => {
-  return axios.post('/api/tweets/', data)
+  return axios.post('/api/posts/', data)
 }
