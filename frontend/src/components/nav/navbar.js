@@ -38,7 +38,7 @@ class NavBar extends React.Component {
   render() {
       return (
         <div>
-            <h1>Cloud</h1>
+            <Link to={'/'}>Cloud</Link>
             { this.getLinks() }
         </div>
       );

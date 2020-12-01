@@ -1,0 +1,71 @@
+.session-form-page {
+    background-image: url("../images/session_background1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.session-form{
+    border-radius: 15px;
+    background-color: #fff;
+	opacity: 0.6;
+    height: 500px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.session-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    position: relative;
+    top: -60px;
+}
+
+.session-nav > a {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.session-form > input {
+    border: 0;
+	outline: none;
+	box-shadow: none;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding: 8px 15px;
+	border-bottom: 1px solid #eee;
+	width: 75%;
+	font-size: 12px;
+}
+
+.session-form > input:focus {
+    background-color: rgb(158, 236, 255);
+}
+
+
+.session-form > button {
+    background-color: rgba(3, 92, 143, 0.4);
+    display: block;
+    margin: 15px auto; 
+	padding: 15px 45px;
+    width: 75%;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 15px;
+    opacity: 1;
+}
+
+.session-form > button:hover {
+    background-color: rgba(1, 151, 238, 0.4);
+    transition: all .2s ease;
+}
