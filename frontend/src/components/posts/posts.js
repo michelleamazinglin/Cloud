@@ -2,7 +2,6 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PostBox from './post_box';
 import NavBarContainer from '../nav/navbar_container'
-import NavBar from '../nav/navbar';
 
 class Posts extends React.Component {
   constructor(props) {

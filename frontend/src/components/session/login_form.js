@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import '../style/session.css'
+import Cloud from'../images/happy_cloud.png'
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -48,7 +49,7 @@ class LoginForm extends React.Component {
   // Render the session errors if there are any
   renderErrors() {
     return(
-      <ul>
+      <ul className="session-error">
         {Object.keys(this.state.errors).map((error, i) => (
           <li key={`error-${i}`}>
             {this.state.errors[error]}
@@ -63,10 +64,8 @@ class LoginForm extends React.Component {
       <div className="session-form-page">
 
           <form className="session-form" onSubmit={this.handleSubmit}>
-                <nav className="session-nav">
-                  <Link to="/">Cloud</Link>
-                  <Link to={'/signup'}>Signup</Link>
-                </nav>
+            <Link to="/"><img src={Cloud} alt="logo" width="100px" height="auto" /></Link>
+                {this.renderErrors()}
                 <input type="text"
                   value={this.state.email}
                   onChange={this.update('email')}
@@ -78,7 +77,7 @@ class LoginForm extends React.Component {
                   placeholder="Password"
                 />
               <button>Submit</button>
-              {this.renderErrors()}
+              <p>if you don't have an account, please <Link to={'/signup'}>Signup</Link></p>
           </form>
       </div>
     );

@@ -13,27 +13,14 @@
     border-radius: 15px;
     background-color: #fff;
 	opacity: 0.6;
-    height: 500px;
-    width: 450px;
+    height: 550px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.session-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    position: relative;
-    top: -60px;
-}
-
-.session-nav > a {
-    text-decoration: none;
-    color: darkblue;
-}
 
 .session-form > input {
     border: 0;
@@ -45,11 +32,13 @@
 	padding: 8px 15px;
 	border-bottom: 1px solid #eee;
 	width: 75%;
-	font-size: 12px;
+    font-size: 13px;
+    border-radius: 7px;
+    color: #001a2e;
 }
 
 .session-form > input:focus {
-    background-color: rgb(158, 236, 255);
+    background-color: rgb(217, 247, 255);
 }
 
 
@@ -63,9 +52,47 @@
     cursor: pointer;
     border-radius: 15px;
     opacity: 1;
+    border: none;
 }
 
 .session-form > button:hover {
     background-color: rgba(1, 151, 238, 0.4);
     transition: all .2s ease;
 }
+
+.session-form > button:focus {
+    outline: none;
+}
+
+.session-form > p {
+    font-size: 16px;
+}
+
+.session-form > p > a {
+    text-decoration: none;
+}
+
+.session-form > p > a:hover {
+    text-decoration-line: underline;
+}
+
+.session-error {
+    list-style-type: none;
+    position: relative;
+    padding: 3px;
+} 
+
+.session-error > li {
+    color: #001a2e;
+    padding: 5px;
+    background-color: rgba(1, 151, 238, 0.4);
+}
+
+.session-error > li:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.session-error > li:last-child {
+    border-radius: 0 0 10px 10px;
+}
+

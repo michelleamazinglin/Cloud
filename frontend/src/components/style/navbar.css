@@ -1,0 +1,25 @@
+.navbar-page {
+    background-color: #26A7FA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 58px;  
+}
+
+.nav-logo {
+    position: relative;
+    left: 20px;
+}
+
+.navbar-page > nav {
+    position: relative;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-page > nav > a {
+    padding: 5px;
+    margin: 5px;
+}

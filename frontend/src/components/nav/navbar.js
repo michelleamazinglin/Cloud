@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-// import './navbar.css'
+import { Link } from 'react-router-dom';
+import '../style/navbar.css';
+import Cloud from'../images/happy_cloud.png';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -18,27 +19,27 @@ class NavBar extends React.Component {
   getLinks() {
       if (this.props.loggedIn) {
         return (
-            <div>
+            <nav>
                 <Link to={'/posts'}>All Clouds</Link>
                 <Link to={'/inbox'}>Inbox</Link>
                 <Link to={'/new_post'}>Write a Post</Link>
                 <button onClick={this.logoutUser}>Logout</button>
-            </div>
+            </nav>
         );
       } else {
         return (
-            <div>
+            <nav>
                 <Link to={'/signup'}>Signup</Link>
                 <Link to={'/login'}>Login</Link>
-            </div>
+            </nav>
         );
       }
   }
 
   render() {
       return (
-        <div>
-            <Link to={'/'}>Cloud</Link>
+        <div className="navbar-page">
+            <Link to={'/'}><img src={Cloud} className="nav-logo" alt="logo" width="80px" height="auto" /></Link>
             { this.getLinks() }
         </div>
       );
