@@ -19,7 +19,44 @@
     justify-content: center;
 }
 
-.navbar-page > nav > a {
-    padding: 5px;
+.nav-signin-signup > a {
+    text-decoration: none;
+    background-color: #ebf3ff;
+    color: #144365;
+    padding: 4px 15px;
+    border-radius: 3px;
     margin: 5px;
+    opacity: 0.8;
+}
+.nav-signin-signup > a:hover {
+    background-color: #ffffff;
+}
+
+.nav-when-log-in > a {
+    margin: 5px;
+    text-decoration: none;
+    color: #144365;
+}
+
+.nav-when-log-in > a:hover {
+    color: #0b2538;
+}
+
+.nav-when-log-in >button {
+    text-decoration: none;
+    background-color: #ebf3ff;
+    color: #144365;
+    padding: 4px 15px;
+    border: none;
+    border-radius: 3px;
+    margin: 5px;
+    opacity: 0.8;
+}
+
+.nav-when-log-in >button:hover {
+    background-color: #ffffff;
+}
+
+.nav-when-log-in >button:focus {
+    outline: none;
 }

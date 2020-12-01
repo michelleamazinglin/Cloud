@@ -19,7 +19,7 @@ class NavBar extends React.Component {
   getLinks() {
       if (this.props.loggedIn) {
         return (
-            <nav>
+            <nav className="nav-when-log-in">
                 <Link to={'/posts'}>All Clouds</Link>
                 <Link to={'/inbox'}>Inbox</Link>
                 <Link to={'/new_post'}>Write a Post</Link>
@@ -28,7 +28,7 @@ class NavBar extends React.Component {
         );
       } else {
         return (
-            <nav>
+            <nav className="nav-signin-signup">
                 <Link to={'/signup'}>Signup</Link>
                 <Link to={'/login'}>Login</Link>
             </nav>
