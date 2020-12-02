@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+html {
+    font-family: 'Itim', cursive;
+}
+
+.main-page-nav {
+    position: sticky;
+    top: 0;
+    height: 70px;
+	width: 100%;
+    background: #fff;
+    bottom: 0;
+}
+
+#screen1 {
+    background-image: url("../images/session_background.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen2 {
+    background: #84dcc6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen3 {
+    background: #0197f6;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-page-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    color: white;
+    font-size: large;
+    text-shadow: 2px 2px #777777;
+
+}
+
+.happy-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.happy-list > div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10%;
+}
+.happy-list > ul {
+    width: 50%;
+    margin: 10%;
+    list-style-image: url('../images/sun_icon.png');
+}
+
+.happy-list > ul > li {
+    padding: 3px;
+}

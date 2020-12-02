@@ -1,5 +1,5 @@
 .navbar-page {
-    background-color: #26A7FA;
+    background-color: tran;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,8 +23,8 @@
     text-decoration: none;
     background-color: #ebf3ff;
     color: #144365;
-    padding: 4px 15px;
-    border-radius: 3px;
+    padding: 6px 25px;
+    border-radius: 10px;
     margin: 5px;
     opacity: 0.8;
 }
@@ -35,11 +35,11 @@
 .nav-when-log-in > a {
     margin: 5px;
     text-decoration: none;
-    color: #144365;
+    color: #0e2e44;
 }
 
 .nav-when-log-in > a:hover {
-    color: #0b2538;
+    color: #315585;
 }
 
 .nav-when-log-in >button {
