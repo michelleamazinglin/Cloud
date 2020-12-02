@@ -1,5 +1,7 @@
 import React from 'react';
 import PostBox from './post_box';
+import NavBarContainer from '../nav/navbar_container'
+
 
 class PostCompose extends React.Component {
   constructor(props) {
@@ -36,6 +38,7 @@ class PostCompose extends React.Component {
   render() {
     return (
         <div>
+            <NavBarContainer />
             <form onSubmit={this.handleSubmit}>
                 <div>
                     <input type="textarea"
