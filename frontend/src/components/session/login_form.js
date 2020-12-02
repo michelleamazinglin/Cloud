@@ -1,5 +1,7 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+import '../style/session.css'
+import Cloud from'../images/happy_cloud.png'
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -47,7 +49,7 @@ class LoginForm extends React.Component {
   // Render the session errors if there are any
   renderErrors() {
     return(
-      <ul>
+      <ul className="session-error">
         {Object.keys(this.state.errors).map((error, i) => (
           <li key={`error-${i}`}>
             {this.state.errors[error]}
@@ -59,25 +61,24 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-              <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                placeholder="Email"
-              />
-            <br/>
-              <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                placeholder="Password"
-              />
-            <br/>
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
-          </div>
-        </form>
+      <div className="session-form-page">
+
+          <form className="session-form" onSubmit={this.handleSubmit}>
+            <Link to="/"><img src={Cloud} alt="logo" width="100px" height="auto" /></Link>
+                {this.renderErrors()}
+                <input type="text"
+                  value={this.state.email}
+                  onChange={this.update('email')}
+                  placeholder="Email"
+                />
+                <input type="password"
+                  value={this.state.password}
+                  onChange={this.update('password')}
+                  placeholder="Password"
+                />
+              <button>Submit</button>
+              <p>if you don't have an account, please <Link to={'/signup'}>Signup</Link></p>
+          </form>
       </div>
     );
   }

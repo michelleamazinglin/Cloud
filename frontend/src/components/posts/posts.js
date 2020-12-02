@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PostBox from './post_box';
+import NavBarContainer from '../nav/navbar_container'
 
 class Posts extends React.Component {
   constructor(props) {
@@ -26,6 +27,7 @@ class Posts extends React.Component {
     } else {
       return (
         <div>
+          <NavBarContainer />
           <h2>All Clouds</h2>
           {this.state.posts.map(post => (
             <PostBox key={post._id} body={post.body} />

@@ -1,0 +1,98 @@
+.session-form-page {
+    background-image: url("../images/session_background1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.session-form{
+    border-radius: 15px;
+    background-color: #fff;
+	opacity: 0.6;
+    height: 550px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.session-form > input {
+    border: 0;
+	outline: none;
+	box-shadow: none;
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	padding: 8px 15px;
+	border-bottom: 1px solid #eee;
+	width: 75%;
+    font-size: 13px;
+    border-radius: 7px;
+    color: #001a2e;
+}
+
+.session-form > input:focus {
+    background-color: rgb(217, 247, 255);
+}
+
+
+.session-form > button {
+    background-color: rgba(3, 92, 143, 0.4);
+    display: block;
+    margin: 15px auto; 
+	padding: 15px 45px;
+    width: 75%;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 15px;
+    opacity: 1;
+    border: none;
+}
+
+.session-form > button:hover {
+    background-color: rgba(1, 151, 238, 0.4);
+    transition: all .2s ease;
+}
+
+.session-form > button:focus {
+    outline: none;
+}
+
+.session-form > p {
+    font-size: 16px;
+}
+
+.session-form > p > a {
+    text-decoration: none;
+}
+
+.session-form > p > a:hover {
+    text-decoration-line: underline;
+}
+
+.session-error {
+    list-style-type: none;
+    position: relative;
+    padding: 3px;
+} 
+
+.session-error > li {
+    color: #001a2e;
+    padding: 5px;
+    background-color: rgba(1, 151, 238, 0.4);
+}
+
+.session-error > li:first-child {
+    border-radius: 10px 10px 0 0;
+}
+
+.session-error > li:last-child {
+    border-radius: 0 0 10px 10px;
+}
+
