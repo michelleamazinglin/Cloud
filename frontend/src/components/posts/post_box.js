@@ -1,13 +1,13 @@
 import React from 'react';
 
-class PostBox extends React.Component {
-  render() {
+
+const PostBox = props => {
+  // debugger
     return (
         <div>
-            <h3>{this.props.body}</h3>
+            <h3>{props.body}</h3>
         </div>
     );
   }
-}
 
 export default PostBox;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PostBox from './post_box';
 import NavBarContainer from '../nav/navbar_container'
-
+import '../style/post_form.css';
 
 class PostCompose extends React.Component {
   constructor(props) {
@@ -37,20 +37,23 @@ class PostCompose extends React.Component {
 
   render() {
     return (
-        <div>
+        <div class="post-form-page">
             <NavBarContainer />
-            <form onSubmit={this.handleSubmit}>
-                <div>
-                    <input type="textarea"
+            <form onSubmit={this.handleSubmit} className="post-form">
+                <div className="post-form-content">
+                    <textarea
                         value={this.state.body}
                         onChange={this.update()}
-                        placeholder="Write your cloud..."
+                        placeholder="Write your cloud here..."
+                        className="post-form-input"
                     />
-                    <input type="submit" value="Submit" />
+                    <button className="post-form-submit">Submit</button>
                 </div>
             </form>
-            <br />
-            <PostBox text={this.state.newPost} />
+            <div className="post-form-output">
+              <PostBox body={this.state.newPost}>
+              </PostBox>
+            </div>
         </div>
     )
   }
