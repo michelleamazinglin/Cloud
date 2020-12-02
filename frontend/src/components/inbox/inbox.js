@@ -1,5 +1,7 @@
 import React from 'react';
 import PostBox from '../posts/post_box';
+import NavBarContainer from '../nav/navbar_container'
+
 
 class Inbox extends React.Component {
     constructor(props) {
@@ -44,9 +46,11 @@ class Inbox extends React.Component {
 
     
     render() {
+        
         if (this.state.posts.length > 0) {
           return (
             <div>
+              <NavBarContainer />
               <h2>All of This User's Clouds</h2>
               {this.state.posts.map((post) => (
                 <div>
