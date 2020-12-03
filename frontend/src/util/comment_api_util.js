@@ -5,6 +5,6 @@ export const getPostComments = id => {
 };
 
 export const writeComment = data => {
-    return axios.post('/api/posts/', data)
+    return axios.post('/api/comments/', data)
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PostBox from '../posts/post_box';
 import NavBarContainer from '../nav/navbar_container'
+import {Link} from 'react-router-dom';
 
 
 class Inbox extends React.Component {
@@ -28,7 +29,7 @@ class Inbox extends React.Component {
     showTheComments(postid, e) {
       e.preventDefault();
       this.props.fetchPostComments(postid).then(object => {
-        console.log(object)
+        // console.log(object)
         this.setState({ comments: object.comments.data, boolean: true })
       })
     }
@@ -52,17 +53,11 @@ class Inbox extends React.Component {
             <div>
               <NavBarContainer />
               <h2>All of This User's Clouds</h2>
-              {this.state.posts.map((post) => (
-                <div>
-                  <PostBox key={post._id} body={post.body} />
-                  {this.isPostEqualToComment(post._id, this.state.comments) ? this.state.comments.map((comment) => (
-                        <div key={comment._id}>{comment.commentBody}</div>
-                      ))
-                    : null}
-                  <button onClick={(e) => this.showTheComments(post._id, e)}>
-                    show comments
-                  </button>
-                </div>
+              {this.state.posts.map((post, idx) => (
+                  <Link key ={idx} to={{
+                    pathname: `/posts/${post._id}`
+                    }} > <PostBox key={post._id} body={post.body} /> 
+                    </Link> 
               ))}
             </div>
           );

@@ -21,7 +21,7 @@ export const fetchPostComments = id => dispatch => {
 
 export const createComment = data => dispatch => {
     return writeComment(data)
-        .then(comment => dispatch(createComment(comment)))
+        .then(comment => dispatch(receiveNewComment(comment)))
         .catch(err => console.log(err))
 };
 
