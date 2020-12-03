@@ -15,6 +15,7 @@ class ReplyBox extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.showTheReplies = this.showTheReplies.bind(this)
+        this.anonUsers = this.anonUsers.bind(this)
     }
 
     update(field) {
@@ -43,7 +44,7 @@ class ReplyBox extends React.Component {
         e.preventDefault();
         if (this.state.showReplies === false) {
             this.props.fetchCommentreplies(this.props.commentId).then((replies) => {
-                console.log(replies)
+                debugger
                 this.setState({
                     allReplies: replies.replies.data,
                     showReplies: true,
@@ -60,6 +61,11 @@ class ReplyBox extends React.Component {
         }
      }
 
+     anonUsers() {
+         let word = "Anonymous"
+         let result = Math.floor(Math.random() * 10000) + 1;
+         return word + result.toString()
+     }
 
 
     render() {
