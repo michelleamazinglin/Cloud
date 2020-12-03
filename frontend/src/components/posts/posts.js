@@ -1,7 +1,12 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import PostBox from './post_box';
-import NavBarContainer from '../nav/navbar_container'
+import NavBarContainer from '../nav/navbar_container';
+import Modal from '../modal/modal';
+import happy from '../images/happy_cloud.png';
+
+
+// import Modal from '../modal/modal';
 
 class Posts extends React.Component {
   constructor(props) {
@@ -21,16 +26,34 @@ class Posts extends React.Component {
   }
 
   render() {
-      console.log(this.props.post)
     if (this.state.posts.length === 0) {
-      return (<div>There are no Clouds</div>)
+      return (<div>
+                <NavBarContainer />
+                There are no Clouds
+               </div>)
     } else {
       return (
         <div>
+          <Modal />
           <NavBarContainer />
           <h2>All Clouds</h2>
           {this.state.posts.map(post => (
-            <PostBox key={post._id} body={post.body} />
+            <>
+            <button onClick={() => this.props.openModal('openPost')}>
+              <img src={happy} 
+                className="nav-logo" 
+                alt="logo" 
+                width="80px" 
+                height="auto"
+              />
+            </button>
+            {/* <PostBox 
+              post={this.props.post}
+              key={post._id} 
+              body={post.body}
+              openModal={this.props.openModal}
+             /> */}
+             </>
           ))}
         </div>
       );
