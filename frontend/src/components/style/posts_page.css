@@ -14,8 +14,11 @@
 
 .cloud-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   position: relative;
+  top: 10%;
 }
 
 
@@ -23,15 +26,15 @@
   display: inline-block;
   padding: 20px;
   position: relative;
-  margin: 0 0 10px 0;
-  animation: move-in-steps 30s infinite;
+  margin: 0;
+  animation: move-clouds 30s infinite;
 }
 
-@keyframes move-in-steps {
+@keyframes move-clouds {
 from {
-             transform: translate(0px);
-           }
-           to {
-            transform: translate(-750px);
+      transform: translate(0px);
+     }
+      to {
+      transform: translate(-750px);
         }
 }   
