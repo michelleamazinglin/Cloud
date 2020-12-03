@@ -24,7 +24,7 @@
   padding: 20px;
   position: relative;
   margin: 0 0 10px 0;
-  animation: move-in-steps 10s infinite;
+  animation: move-in-steps 30s infinite;
 }
 
 @keyframes move-in-steps {
