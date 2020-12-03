@@ -21,6 +21,9 @@ class Inbox extends React.Component {
     
     componentWillMount() {
         this.props.fetchUserPosts(this.props.currentUser.id)
+        this.props.fetchUserComments(this.props.currentUser.id).then(comments => {
+          console.log(comments)
+        })
     }
 
     componentWillReceiveProps(newState) {
