@@ -5,9 +5,9 @@ import Inbox from './inbox';
 
 const mapStateToProps = (state) => {
   return {
-    posts: Object.values(state.posts.user),
+    posts: Object.values(state.entities.posts.user),
     currentUser: state.session.user,
-    comments: state.comments
+    comments: state.entities.comments
   };
 };
 
