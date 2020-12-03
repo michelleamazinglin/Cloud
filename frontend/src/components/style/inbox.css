@@ -1,0 +1,42 @@
+.inbox-intro {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+    font-size: 30px;
+}
+
+.user-clouds > a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;;
+}
+
+
+.inbox-page {
+    background-color: #84dcc6;
+}
+
+.user-clouds > h2 {
+    color: #023766;
+}
+
+.inbox-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.user-clouds {
+    padding: 25px;
+    width: 50%;
+    border: 1px dotted black;
+}
+
+.commented-clouds {
+    padding: 25px;
+    width: 50%;
+    border: 1px dotted black;
+    border-left: none;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import '@fortawesome/fontawesome-free/js/all.js'
 import ReactAudioPlayer from 'react-audio-player';
-import './player.css';
+import "../style/player.css"
 
 class Player extends React.Component {
 

@@ -8,9 +8,10 @@ function Modal({modal, closeModal}) {
     return null;
   }
   let component;
-  switch (modal) {
+  switch (modal.name) {
     case 'openPost':
-      component = <PostBox />;
+      component = <PostBox body={modal.body}/>; 
+      // key into modal(object) find the body in modal
       break;
     default:
       return null;
@@ -26,7 +27,7 @@ function Modal({modal, closeModal}) {
 
 const mapStateToProps = state => {
   return {
-    modal: state.modal
+    modal: state.ui.modal
   };
 };
 

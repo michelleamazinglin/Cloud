@@ -39,7 +39,9 @@ class Posts extends React.Component {
           <h2>All Clouds</h2>
           {this.state.posts.map(post => (
             <>
-            <button onClick={() => this.props.openModal('openPost')}>
+            <button onClick={() => this.props.openModal({name: 'openPost',
+                                                        body: post.body})}>
+                                                          {/* this is the modal */}
               <img src={happy} 
                 className="nav-logo" 
                 alt="logo" 
