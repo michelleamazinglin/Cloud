@@ -33,7 +33,7 @@
 }
 
 .nav-when-log-in > a {
-    margin: 5px;
+    margin: 10px;
     text-decoration: none;
     color: #0e2e44;
 }
@@ -49,7 +49,7 @@
     padding: 4px 15px;
     border: none;
     border-radius: 3px;
-    margin: 5px;
+    margin: 10px;
     opacity: 0.8;
 }
 

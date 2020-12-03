@@ -22,6 +22,27 @@ class Player extends React.Component {
 
 
     return(
+<<<<<<< HEAD
+    <AudioPlayer
+      autoPlay
+      src="https://dl.vgmdownloads.com/soundtracks/kingdom-hearts-original-soundtrack/rijjgiwl/1-01.%20Dearly%20Beloved.mp3"
+      onPlay={e => console.log("onPlay")}
+      className="audio-player"
+      CustomIcons= { {
+        play: playIcon,
+        pause:  pauseIcon,
+        rewind: backwardIcon,
+        forward: forwardIcon,
+        loop: loopIcon,
+        loopOff: loopIconOff,
+        volume: volumeIcon,
+        volumeMute: mute
+      }
+      }
+      
+      // other props here
+    />
+=======
       <div className="audio-player">
         <ReactAudioPlayer
             src="https://dl.vgmdownloads.com/soundtracks/kingdom-hearts-original-soundtrack/rijjgiwl/1-01.%20Dearly%20Beloved.mp3"
@@ -49,6 +70,7 @@ class Player extends React.Component {
     
         /> */}
     </div>
+>>>>>>> master
     )
   };
 }
@@ -59,6 +81,8 @@ export default Player;
 
 
 
+<<<<<<< HEAD
+=======
 // THIS SUCKS 
 
 // import '@fortawesome/fontawesome-free/js/all.js'
@@ -146,3 +170,4 @@ export default Player;
 // }
 
 // LETS TRY AGAIN
+>>>>>>> master
