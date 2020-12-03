@@ -10,6 +10,7 @@ import InboxContainer from '../components/inbox/inbox_container';
 import PostComposeContainer from './posts/post_compose_container';
 import PostShow from './posts/post_show';
 import Player from './player/player';
+import Resources from './resources/resources';
 
 const App = () => (
   <div>
@@ -23,6 +24,7 @@ const App = () => (
       <ProtectedRoute exact path="/inbox" component={InboxContainer} />
       <ProtectedRoute exact path="/new_post" component={PostComposeContainer} />
       <ProtectedRoute exact path= "/posts/:postId" component={PostShow} />
+      <ProtectedRoute exact path="/resources" component={Resources} />
       {/* <ProtectedRoute exact path="/posts" component={Player} /> */}
     </Switch>
   </div>

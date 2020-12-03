@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../style/navbar.css';
 import Cloud from'../images/happy_cloud.png';
 import Player from '../player/player';
+import Resources from '../resources/resources';
 
 
 class NavBar extends React.Component {
@@ -25,6 +26,7 @@ class NavBar extends React.Component {
                 <Link to={'/posts'}>All Clouds</Link>
                 <Link to={'/inbox'}>Inbox</Link>
                 <Link to={'/new_post'}>Write a Post</Link>
+                <Link to={`/resources`}>Resources</Link>
                 <button onClick={this.logoutUser}>Logout</button>
             </nav>
         );
