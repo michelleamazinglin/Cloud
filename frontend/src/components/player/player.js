@@ -23,8 +23,5 @@ class Player extends React.Component {
 
 
 export default Player;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> master
