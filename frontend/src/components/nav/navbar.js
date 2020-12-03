@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../style/navbar.css';
 import Cloud from'../images/happy_cloud.png';
+import Player from '../player/player';
+
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -40,6 +42,7 @@ class NavBar extends React.Component {
       return (
         <div className="navbar-page">
             <Link to={'/'}><img src={Cloud} className="nav-logo" alt="logo" width="80px" height="auto" /></Link>
+            <Player />
             { this.getLinks() }
         </div>
       );

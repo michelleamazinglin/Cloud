@@ -1,0 +1,6 @@
+.audio-player {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+}
+

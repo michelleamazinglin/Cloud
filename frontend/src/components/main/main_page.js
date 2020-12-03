@@ -55,6 +55,7 @@ class MainPage extends React.Component {
       </section>
       <section id="screen3">
         <p> this is the page inteoduce 4 of us</p>
+        <p>Thanks for visiting. Signup to join our community &hearts;. Also, enjoy these cats to help you relax .</p>
         <footer>
           Copyright &copy; 2020 TheCloud
         </footer>
