@@ -1,0 +1,22 @@
+.inbox-intro {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+    font-size: 30px;
+}
+
+.inbox-page > a {
+    text-decoration: none;
+    color: black;
+}
+
+.inbox-page {
+    background-color: #84dcc6;
+}
+
+.inbox-page > h2 {
+    color: #023766;
+}
