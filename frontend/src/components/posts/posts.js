@@ -36,7 +36,7 @@ class Posts extends React.Component {
         <div className="post-page">
           <Modal />
           <NavBarContainer />
-          <h2>Click on any cloud to see other people's feeling</h2>
+          <h2>Click on any cloud to see other user's feeling:</h2>
           <div className="cloud-container">
           {this.state.posts.map(post => (
             <>

@@ -11,7 +11,7 @@
 .user-clouds > a {
     text-decoration: none;
     color: #0F2E44;
-    cursor: pointer;
+    cursor: url(../images/cloud_cursor.png),auto;
 }
 
 .user-clouds > a > h3 {
