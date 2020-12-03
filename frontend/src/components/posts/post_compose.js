@@ -39,22 +39,23 @@ class PostCompose extends React.Component {
     return (
         <div class="post-form-page">
             <NavBarContainer />
-            <form onSubmit={this.handleSubmit} className="post-form">
-                <div className="post-form-output">
-                  <PostBox body={this.state.newPost}>
-                  </PostBox>
-                </div>
-                <div className="post-form-content">
-                    <textarea
-                        value={this.state.body}
-                        onChange={this.update()}
-                        placeholder="Write your cloud here..."
-                        className="post-form-input"
-                    />
-                    <button className="post-form-submit">Submit</button>
-                </div>
-            </form>
-
+            <div className="form-wrap">
+              <form onSubmit={this.handleSubmit} className="post-form">
+                  <div className="post-form-output">
+                    <PostBox body={this.state.newPost}>
+                    </PostBox>
+                  </div>
+                  <div className="post-form-content">
+                      <textarea
+                          value={this.state.body}
+                          onChange={this.update()}
+                          placeholder="Write your cloud here..."
+                          className="post-form-input"
+                      />
+                      <button className="post-form-submit">Submit</button>
+                  </div>
+              </form>
+            </div>
         </div>
     )
   }
