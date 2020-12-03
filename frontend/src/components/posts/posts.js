@@ -47,12 +47,12 @@ class Posts extends React.Component {
                 height="auto"
               />
             </button>
-            <PostBox 
+            {/* <PostBox 
               post={this.props.post}
               key={post._id} 
               body={post.body}
               openModal={this.props.openModal}
-             />
+             /> */}
              </>
           ))}
         </div>

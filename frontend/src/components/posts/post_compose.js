@@ -40,6 +40,10 @@ class PostCompose extends React.Component {
         <div class="post-form-page">
             <NavBarContainer />
             <form onSubmit={this.handleSubmit} className="post-form">
+                <div className="post-form-output">
+                  <PostBox body={this.state.newPost}>
+                  </PostBox>
+                </div>
                 <div className="post-form-content">
                     <textarea
                         value={this.state.body}
@@ -50,10 +54,7 @@ class PostCompose extends React.Component {
                     <button className="post-form-submit">Submit</button>
                 </div>
             </form>
-            <div className="post-form-output">
-              <PostBox body={this.state.newPost}>
-              </PostBox>
-            </div>
+
         </div>
     )
   }
