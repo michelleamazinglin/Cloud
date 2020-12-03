@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Chat, addResponseMessage, addLinkSnippet, addUserMessage } from 'react-chat-popup';
-import { Link } from 'react-router-dom';
 import logo from '../images/sun_icon.png';
  
 class LiveChat extends Component {
@@ -13,13 +12,29 @@ class LiveChat extends Component {
   handleNewUserMessage = (newMessage) => {
     console.log(`New message incoming! ${newMessage}`);
     // Now send the message throught the backend API
+    let response = ""
 
-    let resourcesLink = <Link to={`cloudymind-herokuapp.com/resources`}>Click here for our resources information</Link>
+    let resourceLinks = {
+        title: 'Click here for immediate help',
+        link: 'cloudymind-herokuapp.com/resources',
+        target: '_blank'
+    }
+    
+    let hiResponse = {
+        title: 'As much as I would like to chat, you should share your thoughts with others in the cloud. Click here to get started',
+        link: 'cloudymind-herokuapp.com/signup',
+        target: '_blank'
+    }
 
-    if (newMessage === "resources" || "Resources") {
-        addResponseMessage("Check out our Resources =>"), addLinkSnippet(resourcesLink)
-    } else {
-        addResponseMessage("I'm sorry, type 'hi' or 'resources' for instructions")
+    // let userResponses = ["resources", "resource", "hi", "Hi"]
+
+    if (newMessage === ("resources" || "Resources")) {
+        response = addLinkSnippet(resourceLinks)
+        // addResponseMessage(response)
+    } else  {
+        // if (newMessage === ("Hi" || "hi"))
+        response = addLinkSnippet(hiResponse)
+        // addResponseMessage(response)
     }
   }
 
@@ -28,7 +43,7 @@ class LiveChat extends Component {
     
       const titleMessage = "Are You Feeling Cloudy Today?"
       const subTitleMessage = "Let's chat about it"
-      const senderPlaceHolder = "Type 'Resources' or 'Hello' for instructions"
+      const senderPlaceHolder = "Type 'Resources' or 'Hi' for instructions"
     return (
       <div className="livechat">
         <Chat
