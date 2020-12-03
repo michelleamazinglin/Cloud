@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBarContainer from '../nav/navbar_container'
 import '../style/main.css'
+import LiveStreaming from '../livestream/livestream'
 
 
 class MainPage extends React.Component {
@@ -55,6 +56,7 @@ class MainPage extends React.Component {
       </section>
       <section id="screen3">
         <p> this is the page inteoduce 4 of us</p>
+        <p>Thanks for visiting. Signup to join our community &hearts;. Also, enjoy these cats to help you relax .<LiveStreaming/></p>
         <footer>
           Copyright &copy; 2020 TheCloud
         </footer>
