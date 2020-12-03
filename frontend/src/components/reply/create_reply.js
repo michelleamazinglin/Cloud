@@ -4,25 +4,24 @@ class ReplyBox extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            allReplies: []
+            allReplies: [],
+            showReplies: false
         }
     }
 
     render() {
-    //comments.replies.data
-        // this.props.fetchCommentreplies(this.props.commentId).then(comments => {
-        //     console.log(comments)
-        // })
+        if (this.state.showReplies === false) {
         this.props.fetchCommentreplies(this.props.commentId).then(replies => {
             this.setState({
                 allReplies: replies.replies.data
             })
         })
+    }
         
         return(
         <div>       
             {this.state.allReplies.map((reply, idx) => (
-                <li>
+                <li key={idx}>
                     {reply.replyBody}
                 </li>
             ))}
