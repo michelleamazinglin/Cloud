@@ -1,9 +1,9 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import PostBox from './post_box';
 import NavBarContainer from '../nav/navbar_container';
 import Modal from '../modal/modal';
 import happy from '../images/happy_cloud.png';
+import '../style/posts_page.css'
 
 
 // import Modal from '../modal/modal';
@@ -27,36 +27,29 @@ class Posts extends React.Component {
 
   render() {
     if (this.state.posts.length === 0) {
-      return (<div>
+      return (<div className="post-page">
                 <NavBarContainer />
-                There are no Clouds
+                <h3 className="no-clouds">There are no Clouds</h3>
                </div>)
     } else {
       return (
-        <div>
+        <div className="post-page">
           <Modal />
           <NavBarContainer />
-          <h2>All Clouds</h2>
+          <h2>Click on any cloud</h2>
+          <div className="cloud-container">
           {this.state.posts.map(post => (
             <>
-            <button onClick={() => this.props.openModal({name: 'openPost',
-                                                        body: post.body})}>
-                                                          {/* this is the modal */}
-              <img src={happy} 
-                className="nav-logo" 
+            <img src={happy} 
+                onClick={() => this.props.openModal({name: 'openPost',
+                                                        body: post.body})}
+                                                        // this is the modal
+                className="floating-cloud" 
                 alt="logo" 
-                width="80px" 
-                height="auto"
               />
-            </button>
-            {/* <PostBox 
-              post={this.props.post}
-              key={post._id} 
-              body={post.body}
-              openModal={this.props.openModal}
-             /> */}
-             </>
+             </> 
           ))}
+          </div>
         </div>
       );
     }

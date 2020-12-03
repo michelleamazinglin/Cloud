@@ -1,12 +1,12 @@
 import React from 'react';
-
+// import '../style/modal.css'
 
 const PostBox = props => {
   // debugger
     return (
-        <div>
+        <>
             <h3>{props.body}</h3>
-        </div>
+        </>
     );
   }
 

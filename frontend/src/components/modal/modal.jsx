@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import PostBox from '../posts/post_box';
+import '../style/modal.css'
 
 function Modal({modal, closeModal}) {
   if (!modal) {

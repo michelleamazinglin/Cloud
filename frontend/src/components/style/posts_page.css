@@ -1,0 +1,37 @@
+.post-page {
+    background-color: #26A7FA;
+    height: 100vh;
+}
+
+.no-clouds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+.cloud-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.floating-cloud {
+  display: inline-block;
+  padding: 20px;
+  position: relative;
+  margin: 0 0 10px 0;
+  animation: move-in-steps 30s infinite;
+}
+
+@keyframes move-in-steps {
+from {
+             transform: translate(0px);
+           }
+           to {
+            transform: translate(-750px);
+        }
+}   
