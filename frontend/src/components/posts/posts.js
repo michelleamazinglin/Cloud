@@ -36,7 +36,7 @@ class Posts extends React.Component {
         <div className="post-page">
           <Modal />
           <NavBarContainer />
-          <h2>All Clouds</h2>
+          <h2>Click on any cloud</h2>
           <div className="cloud-container">
           {this.state.posts.map(post => (
             <>
@@ -46,8 +46,6 @@ class Posts extends React.Component {
                                                         // this is the modal
                 className="floating-cloud" 
                 alt="logo" 
-                width="80px" 
-                height="auto"
               />
              </> 
           ))}
