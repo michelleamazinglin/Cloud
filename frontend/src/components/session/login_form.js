@@ -85,12 +85,12 @@ class LoginForm extends React.Component {
                   onChange={this.update('password')}
                   placeholder="Password"
                 />
-              <button>Submit</button>
+              <button onSubmit={this.handleSubmit} >Submit</button>
+              <button id="demo-button" onClick={this.handleDemoSubmit}>
+                DEMO USER LOGIN
+              </button>
               <p>if you don't have an account, please <Link to={'/signup'}>Signup</Link></p>
               <Link to={`/posts`} className="demo-user-button">
-                <button onClick={this.handleDemoSubmit}>
-                    DEMO USER LOGIN
-                </button>
               </Link>
           </form>
       </div>

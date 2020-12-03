@@ -2,6 +2,7 @@ import React from 'react';
 import PostBox from '../posts/post_box';
 import NavBarContainer from '../nav/navbar_container'
 import {Link} from 'react-router-dom';
+import '../style/inbox.css'
 
 
 class Inbox extends React.Component {
@@ -50,19 +51,33 @@ class Inbox extends React.Component {
         
         if (this.state.posts.length > 0) {
           return (
-            <div>
+            <div className="inbox-page">
               <NavBarContainer />
-              <h2>All of This User's Clouds</h2>
-              {this.state.posts.map((post, idx) => (
-                  <Link key ={idx} to={{
-                    pathname: `/posts/${post._id}`
-                    }} > <PostBox key={post._id} body={post.body} /> 
-                    </Link> 
-              ))}
+              <div className="inbox-container">
+                <div className="user-clouds">
+                  <h2>All of This User's Clouds</h2>
+                  {this.state.posts.map((post, idx) => (
+                      <Link key ={idx} to={{
+                        pathname: `/posts/${post._id}`
+                        }} > <PostBox key={post._id} body={post.body} /> 
+                        </Link> 
+                  ))}
+                </div>
+                <div className="commented-clouds">
+                   <h2>All of commented Clouds</h2>
+                  {/* code here */}
+                </div>
+              </div>
             </div>
           );
         } else {
-          return null
+          return (
+            <div className="inbox-page">
+              <NavBarContainer />
+              <p className="inbox-intro">start with writing a Cloud or comment on a Cloud ;D</p>
+
+            </div>
+            )
         }
       }
 }

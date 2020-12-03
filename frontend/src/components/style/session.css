@@ -55,6 +55,10 @@
     border: none;
 }
 
+#demo-button {
+    margin-top: -2px;
+}
+
 .session-form > button:hover {
     background-color: rgba(1, 151, 238, 0.4);
     transition: all .2s ease;
