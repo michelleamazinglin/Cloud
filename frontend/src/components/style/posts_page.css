@@ -3,6 +3,10 @@
     height: 100vh;
 }
 
+.post-page > h2 {
+  color: #0F2E44;
+}
+
 .no-clouds {
     display: flex;
     justify-content: center;
@@ -12,29 +16,18 @@
     position: relative;
 }
 
-.cloud-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  top: 10%;
-}
 
 
 .floating-cloud {
-  display: inline-block;
-  padding: 20px;
   position: relative;
-  margin: 0;
-  animation: move-clouds 30s infinite;
+  animation-name: moving;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;  
 }
 
-@keyframes move-clouds {
-from {
-      transform: translate(0px);
-     }
-      to {
-      transform: translate(-750px);
-        }
-}   
+@keyframes moving {
+  0%   { left:0px; top:0px;}
+  50%  { left:200px; top:0px;}
+  100% { left:0px; top:0px;}
+}
