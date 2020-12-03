@@ -1,33 +1,47 @@
 .post-page {
     background-color: #26A7FA;
     height: 100vh;
+    overflow: hidden;
 }
 
 .post-page > h2 {
   color: #0F2E44;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .no-clouds {
+    text-align: center;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 100vh;
-    position: relative;
+    margin-top: -40px;
+    font-size: 30px;
 }
 
+
+.cloud-container {
+  width: 100%;
+  height: 50vh;
+  text-align: center;
+  overflow: auto;
+  overflow-x: hidden;
+}
 
 
 .floating-cloud {
   position: relative;
   animation-name: moving;
-  animation-duration: 4s;
+  animation-duration: 30s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;  
+  animation-direction: alternate; 
+  cursor: pointer; 
+  margin: 7px;
 }
 
 @keyframes moving {
-  0%   { left:0px; top:0px;}
-  50%  { left:200px; top:0px;}
-  100% { left:0px; top:0px;}
+  0%   { left:-80px; top:0px;}
+  50%  { left:80px; top:0px;}
+  100% { left:-80px; top:0px;}
 }
