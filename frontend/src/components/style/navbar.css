@@ -64,3 +64,7 @@
 .nav-when-log-in >button:focus {
     outline: none;
 }
+
+.audio-player {
+    margin-top: 8px;
+}
