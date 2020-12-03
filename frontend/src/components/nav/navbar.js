@@ -42,7 +42,7 @@ class NavBar extends React.Component {
       return (
         <div className="navbar-page">
             <Link to={'/'}><img src={Cloud} className="nav-logo" alt="logo" width="80px" height="auto" /></Link>
-            {/* <Player /> */}
+            <Player />
             { this.getLinks() }
         </div>
       );

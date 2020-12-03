@@ -8,6 +8,7 @@ const passport = require('passport');
 
 const users = require("./routes/api/users");
 const posts = require("./routes/api/posts");
+const comments = require("./routes/api/comments");
 
 
 mongoose
@@ -26,6 +27,7 @@ mongoose
 
   app.use("/api/users", users);
   app.use("/api/posts", posts);
+  app.use("/api/comments", comments);
 
 
 const port = process.env.PORT || 5000;

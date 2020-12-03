@@ -1,8 +1,9 @@
-import { getPosts, getUserPosts, writePost } from '../util/post_api_util';
+import { getPosts, getUserPosts, writePost, getPost } from '../util/post_api_util';
 
 export const RECEIVE_POSTS = "RECEIVE_POSTS";
 export const RECEIVE_USER_POSTS = "RECEIVE_USER_POSTS";
 export const RECEIVE_NEW_POST = "RECEIVE_NEW_POST";
+export const RECEIVE_POST = "RECEIVE_POST";
 
 export const receivePosts = posts => ({
   type: RECEIVE_POSTS,
@@ -16,6 +17,11 @@ export const receiveUserPosts = posts => ({
 
 export const receiveNewPost = post => ({
   type: RECEIVE_NEW_POST,
+  post
+})
+
+export const receivePost = post => ({
+  type: RECEIVE_POST,
   post
 })
 
@@ -36,3 +42,8 @@ export const composePost = data => dispatch => (
     .then(post => dispatch(receiveNewPost(post)))
     .catch(err => console.log(err))
 );
+
+export const fetchPost = (id) => dispatch => {
+  return getPost(id).then(post => dispatch(receivePost(post)))
+  .catch(err => console.log(err))
+}
