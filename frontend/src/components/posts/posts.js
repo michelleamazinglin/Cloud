@@ -27,16 +27,17 @@ class Posts extends React.Component {
 
   render() {
     if (this.state.posts.length === 0) {
-      return (<div>
+      return (<div className="post-page">
                 <NavBarContainer />
-                There are no Clouds
+                <h3 className="no-clouds">There are no Clouds</h3>
                </div>)
     } else {
       return (
-        <div>
+        <div className="post-page">
           <Modal />
           <NavBarContainer />
           <h2>All Clouds</h2>
+          <div className="cloud-container">
           {this.state.posts.map(post => (
             <>
             <img src={happy} 
@@ -48,8 +49,9 @@ class Posts extends React.Component {
                 width="80px" 
                 height="auto"
               />
-             </>
+             </> 
           ))}
+          </div>
         </div>
       );
     }

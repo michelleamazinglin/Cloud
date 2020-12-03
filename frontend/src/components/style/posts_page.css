@@ -1,0 +1,35 @@
+.post-page {
+    background-color: #26A7FA;
+    height: 100vh;
+}
+
+.no-clouds {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -40px;
+    font-size: 30px;
+}
+
+
+.floating-cloud {
+  display: inline-block;
+  padding: 20px;
+  color: white;
+  position: relative;
+  margin: 0 0 10px 0;
+    animation: move-in-steps 150s infinite;
+}
+
+@keyframes move-in-steps {
+  0% {
+    left: 0%;
+    /* background: blue; */
+  }
+  100% {
+    left: 100%;
+    /* background: red; */
+  }
+}   
