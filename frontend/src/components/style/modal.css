@@ -13,7 +13,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);;
-  background-color: #eccbd9;
+  background-image: url("../images/session_background1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 40%;
   height: 40%;
   display: flex;
@@ -24,5 +27,7 @@
 }
 
 .modal-child > h3 {
-    color: white;
+    color:#0F2E44;
+    font-size: 25px;
+    margin: 20px;
 }
