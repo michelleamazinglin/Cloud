@@ -10,7 +10,7 @@ class Player extends React.Component {
 
 
     return(
-      <div className="audio-player">
+      <div class="audio-player">
         <ReactAudioPlayer
             src="https://dl.vgmdownloads.com/soundtracks/kingdom-hearts-original-soundtrack/rijjgiwl/1-01.%20Dearly%20Beloved.mp3"
             // autoPlay
