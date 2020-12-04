@@ -114,7 +114,7 @@ class Inbox extends React.Component {
           return (
             <div className="inbox-page">
               <NavBarContainer />
-              <p className="inbox-intro">start with writing a Cloud or comment on a Cloud ;D</p>
+              <p className="inbox-intro">Initiate Your Inbox By Writing A Cloud!</p>
 
             </div>
             )
