@@ -108,7 +108,7 @@ class MainPage extends React.Component {
           <br />
           <img src={miumiu} alt="miumiu" className="face"/>
           <br />
-          <p>miumiu - our mascow</p>
+          <p>miumiu - our mascot</p>
         </footer>
       </section>
  
