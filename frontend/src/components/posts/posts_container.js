@@ -7,8 +7,8 @@ import { openModal } from '../../actions/modal_actions';
 const mapStateToProps = (state) => {
   // debugger
   return {
-    posts: Object.values(state.entities.posts.all)
-    // post: state
+    posts: Object.values(state.entities.posts.all),
+    currentUser: state.session.user
   };
 };
 

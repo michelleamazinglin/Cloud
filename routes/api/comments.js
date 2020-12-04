@@ -6,7 +6,15 @@ const passport = require('passport');
 const Comment = require('../../models/Comment');
 const validateCommentInput = require('../../validation/comments');
 
-
+router.get('/:user_id', (req, res) => {
+    Comment.find({user: req.params.user_id})
+        .then(comments => res.json(comments))
+        .catch((err) =>
+            res
+                .status(404)
+                .json({ nocommentsfound: "No comments found from that user" })
+        );
+})
 
 router.get('/post/:post_id', (req, res) => {
     Comment.find({post: req.params.post_id})

@@ -12,7 +12,9 @@ class Inbox extends React.Component {
         this.state = {
             posts: [],
             comments: [],
-            boolean: false
+            boolean: false,
+            commentedOnPostsBody: [],
+            username: ''
         }
         this.showTheComments = this.showTheComments.bind(this);
         this.isPostEqualToComment = this.isPostEqualToComment.bind(this)
@@ -21,6 +23,36 @@ class Inbox extends React.Component {
     
     componentWillMount() {
         this.props.fetchUserPosts(this.props.currentUser.id)
+        this.props.fetchUserComments(this.props.currentUser.id).then(comments => {
+        comments.comments.data.forEach(comment => {
+          this.props.fetchPost(comment.post).then(post => {
+            this.props.fetchUser(post.post.data.user).then((user) => {
+              let oldArr = this.state.commentedOnPostsBody;
+              let obj = {body: post.post.data.body, username: user.user.data.username}
+            if (oldArr.length < 1) {
+              oldArr.push(obj)
+            }
+            else {
+              oldArr.forEach((oldObj) => {
+                console.log(oldArr)
+                if (oldObj.body !== obj.body) {
+                  oldArr.push(obj)
+                }
+              })
+
+            }
+            this.setState({
+              commentedOnPostsBody: oldArr,
+              // username: user.user.data.username
+
+            })
+          // }
+            })
+       
+            
+          })
+        })
+        })
     }
 
     componentWillReceiveProps(newState) {
@@ -65,7 +97,11 @@ class Inbox extends React.Component {
                 </div>
                 <div className="commented-clouds">
                    <h2>All of commented Clouds</h2>
-                  {/* code here */}
+                  {this.state.commentedOnPostsBody.map((obj) => (
+                      <div>
+                        {obj.username}: {obj.body}
+                        </div>
+                  ))}
                 </div>
               </div>
             </div>
