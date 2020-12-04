@@ -63,3 +63,22 @@
     overflow: auto;
     margin-right: 10px;
 }
+
+.commented-list {
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.17em;
+    margin: 0;
+    margin-top: 5px;
+}
+
+.commented-list > a {
+    text-decoration: none;
+    color: #0F2E44;
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAYAAAAe2bNZAAAAAXNSR0IArs4c6QAAANVJREFUWIXtlkEOAyEIRZXM/VdNL9k7YDdlQggooO2mvGRWA/jnC46tFUVR/BE9mTcO1wsn3wIQUQ0AgGztUMKwBFh8hIUEeYLDQrKCYB3yO1ZirEaN4K4xszC9PRzR1NN1LWdOOBJGU6iOMACYIx2JoThtbenMQMRGz+vxvF94FuExPNeIG03sAFfn6hH6etkLJ8Y/NdpGU25DzmRP2LQjSq1+ZQucECEhv/u3rI8gx2v5Z9bwjrSWx3VMT2DrhTZNXki0dtZkLkNc5E7+1kWsKIoiwxuSHlsj/7bl3QAAAABJRU5ErkJggg==),auto;
+}
+
+.commented-list:hover {
+    background-color: #5dbea6;
+}
