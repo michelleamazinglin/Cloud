@@ -2,6 +2,7 @@ import React from 'react';
 import { closeModal } from '../../actions/modal_actions';
 import { connect } from 'react-redux';
 import PostBox from '../posts/post_box';
+import CommentContainer from '../comment/comment_container';
 import '../style/modal.css'
 
 function Modal({modal, closeModal}) {
@@ -11,7 +12,7 @@ function Modal({modal, closeModal}) {
   let component;
   switch (modal.name) {
     case 'openPost':
-      component = <PostBox body={modal.body}/>; 
+      component = <div><PostBox body={modal.body} /><CommentContainer postId = {modal.postId} /></div>; 
       // key into modal(object) find the body in modal
       break;
     default:

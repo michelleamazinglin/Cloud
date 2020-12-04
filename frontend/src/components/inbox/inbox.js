@@ -29,17 +29,21 @@ class Inbox extends React.Component {
             this.props.fetchUser(post.post.data.user).then((user) => {
               let oldArr = this.state.commentedOnPostsBody;
               let obj = {body: post.post.data.body, username: user.user.data.username}
+              let count = 0
             if (oldArr.length < 1) {
               oldArr.push(obj)
             }
             else {
               oldArr.forEach((oldObj) => {
-                console.log(oldArr)
-                if (oldObj.body !== obj.body) {
-                  oldArr.push(obj)
+                if (oldObj.body === obj.body ) {
+                  count += 1
                 }
+                
               })
-
+              if (count === 0) {
+                oldArr.push(obj)
+              }
+             
             }
             this.setState({
               commentedOnPostsBody: oldArr,
