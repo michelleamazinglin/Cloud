@@ -1,6 +1,7 @@
 .post-show-page {
     background-color: #85DCC6;
     min-height: 100vh;
+    color: #0F2E44;
 }
 
 .back-to-inbox {
@@ -37,6 +38,7 @@
     align-items: center;
     justify-content: center;
     overflow: auto;
+    color: black;
 }
 
 .post-show-page > h3 {
@@ -71,13 +73,16 @@
 .reply-form > input {
     padding: 20px;
     font-size: 16px;
-    color: #fff;
     margin-bottom: 30px;
     border: 1px solid white;
     outline: none;
     background: transparent;
     margin: 0px;
     margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-family: 'Itim', cursive;
+    font-size: 16px;
 }
 
 .reply-form > input:focus {
@@ -117,6 +122,13 @@
 .reply-sub-page {
     position: relative;
     /* background-color: #26A7FA; */
-    left: 10px;
+    left: 30px;
     padding-left: 10px;
+    list-style-image: url('../images/sun_icon.png');
+}
+
+.reply-sub-page > div > li {
+    padding: 5px;
+    position: relative;
+    left: 20px;
 }
