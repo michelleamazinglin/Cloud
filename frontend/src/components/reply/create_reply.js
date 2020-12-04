@@ -1,4 +1,5 @@
 import React from 'react'
+import '../style/post_show.css'
 
 class ReplyBox extends React.Component {
     constructor(props) {
@@ -66,7 +67,7 @@ class ReplyBox extends React.Component {
       
         
         return(
-            <div>
+            <div className="reply-sub-page">
                 {this.state.showReplies ? 
                     <div>
                         {this.state.allReplies.map((reply, idx) => (
@@ -74,18 +75,20 @@ class ReplyBox extends React.Component {
                                 {reply.replyBody}
                             </li>
                         ))}
-                        <form onSubmit={this.handleSubmit}>
+                        <form onSubmit={this.handleSubmit} className="reply-form">
                             <input type="text"
                                 value={this.state.createReply.replyBody}
                                 onChange={this.update('replyBody')}
                                 placeholder="Insert reply here :)"
                             />
-                            <button>Reply</button>
+                            <button className="show-hide-button" >Reply</button>
                         </form> 
                     </div>
                     : null
                 }
-                <button onClick={this.showTheReplies}>{this.state.buttonLabel}</button>
+                <button
+                className="show-hide-button"
+                 onClick={this.showTheReplies}>{this.state.buttonLabel}</button>
             </div>
 
         

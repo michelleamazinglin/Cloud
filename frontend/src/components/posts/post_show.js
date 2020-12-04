@@ -4,6 +4,9 @@ import {fetchPostComments} from '../../actions/comment_actions';
 import {fetchPost} from '../../actions/post_actions';
 // import CommentBoxContainer from '../comment/comment_container'
 import ReplyBoxContainer from '../reply/reply_container';
+import { Link } from 'react-router-dom';
+import '../style/post_show.css'
+
 
 class PostShow extends React.Component {
   constructor(props) {
@@ -49,7 +52,11 @@ class PostShow extends React.Component {
     }
 
     return (
-      <div>
+      <div className="post-show-page">
+        <Link to={'/inbox'} className="back-to-inbox">
+          <img src="https://cdn.iconscout.com/icon/free/png-512/back-arrow-1767531-1502435.png" width="30px" height="30px"></img>
+          <p>Back to Inbox</p>
+        </Link>
         <h2>{this.state.post.post.data.body}</h2>
         <ul>
           {this.state.comments.map((comment, idx) => (
