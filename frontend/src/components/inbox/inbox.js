@@ -91,7 +91,7 @@ class Inbox extends React.Component {
               <NavBarContainer />
               <div className="inbox-container">
                 <div className="user-clouds">
-                  <h2>All of This User's Clouds</h2>
+                  <h2>All of This User's Clouds:</h2>
                   {this.state.posts.map((post, idx) => (
                       <Link key ={idx} to={{
                         pathname: `/posts/${post._id}`
@@ -100,11 +100,11 @@ class Inbox extends React.Component {
                   ))}
                 </div>
                 <div className="commented-clouds">
-                   <h2>All of commented Clouds</h2>
-                  {this.state.commentedOnPostsBody.map((obj, idx) => (
-                      <div>
+                   <h2>All of commented Clouds:</h2>
+                    {this.state.commentedOnPostsBody.map((obj, idx) => (
+                    <div className="commented-list">
                       <Link key ={idx} to={`/posts/${obj.postId}`}>{obj.username}: {obj.body}</Link>
-                        </div>
+                    </div>
                   ))}
                 </div>
               </div>
