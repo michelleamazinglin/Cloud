@@ -48,7 +48,9 @@ class Posts extends React.Component {
            <>
             <img src={happy} 
                 onClick={() => this.props.openModal({name: 'openPost',
-                                                        body: post.body})}
+                                                        body: post.body,
+                                                      postId: post._id
+                                                      })}
                                                         // this is the modal
                 className="floating-cloud" 
                 alt="logo" 

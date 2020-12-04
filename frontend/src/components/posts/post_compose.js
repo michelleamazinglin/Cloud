@@ -16,6 +16,9 @@ class PostCompose extends React.Component {
   } 
 
   componentWillReceiveProps(nextProps) {
+    if(nextProps.newPost === undefined) {
+      return false
+    } 
       this.setState({newPost: nextProps.newPost.body});
   }
 

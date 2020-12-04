@@ -34,9 +34,9 @@ class CommentBox extends React.Component {
                 <input type="text"
                   value={this.state.commentBody}
                   onChange={this.update('commentBody')}
-                  placeholder="Insert reply here :)"
+                  placeholder="Create a Comment Here... :)"
                 />
-              <button>Reply</button>
+              <button>Create a Comment</button>
           </form>
         )
     }
