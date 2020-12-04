@@ -24,6 +24,7 @@
     "mongoose": "^5.10.18",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-chat-popup": "^1.1.2",
     "react-h5-audio-player": "^3.5.0",
     "validator": "^13.1.17"
   },
