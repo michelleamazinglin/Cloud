@@ -1,0 +1,122 @@
+.post-show-page {
+    background-color: #85DCC6;
+    min-height: 100vh;
+}
+
+.back-to-inbox {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+.back-to-inbox > p {
+    margin: 5px;
+    color: black;
+    font-size: 18px;
+}
+
+.post-show-page > a {
+    text-decoration: none;
+}
+
+.post-show-page > h2 {
+    margin: 40px;
+    margin-top: 60px;
+    font-size: 26px;
+    background-image: url("../images/session_background1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 20vw;
+    text-align: center;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.post-show-page > h3 {
+    margin: 40px;
+    margin-top: 60px;
+}
+
+.post-show-page > ul {
+    list-style-type: none;
+    width: 80%;
+}
+
+.post-show-page > ul > div > li {
+    cursor: pointer;;
+    padding: 20px 10px;
+    border-radius: 5px;
+    margin: 0;
+    margin-top: 5px;
+    font-size: 23px;
+}
+
+.post-show-page > ul > div > li:hover {
+    background-color: #5dbea6;
+}
+
+.reply-form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.reply-form > input {
+    padding: 20px;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: 1px solid white;
+    outline: none;
+    background: transparent;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.reply-form > input:focus {
+    background-color: #5dbea6;
+}
+
+.show-hide-button {
+    position: relative;
+    padding: 5px 10px;
+    color: #01bdc7;
+    border: 1px solid white;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: .3s;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    margin: 0;
+    margin-bottom: 10px;
+
+}
+
+.show-hide-button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid white;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+.show-hide-button:focus {
+    outline: none;
+}
+
+.reply-sub-page {
+    position: relative;
+    /* background-color: #26A7FA; */
+    left: 10px;
+    padding-left: 10px;
+}

@@ -30,7 +30,7 @@ class CommentBox extends React.Component {
     render(){
         return(
           <form onSubmit={this.handleSubmit}>
-              {console.log(this.props)}
+              {/* {console.log(this.props)} */}
                 <input type="text"
                   value={this.state.commentBody}
                   onChange={this.update('commentBody')}

@@ -1,0 +1,41 @@
+.resource-page {
+    background-color: #eccbd9;
+}
+
+.resource-wrap {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.mental-health-service {
+    width: 50%;
+    margin: 30px;
+    text-align: right;
+    color: #0F2E44;
+}
+
+.resource-links {
+    width: 50%;
+    margin: 30px;
+    text-align: left;
+}
+
+.resource-list {
+    list-style-type: none;
+}
+
+.resource-page > h1{
+    margin-top: 50px;
+    text-align: center;
+    color: #0F2E44;
+}
+
+.color-red {
+    color: red;
+}
+
+.resource-links > p > a{
+    text-decoration: none;
+    color: #0F2E44;
+}
