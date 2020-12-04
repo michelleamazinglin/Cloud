@@ -59,7 +59,7 @@ class Resources extends React.Component {
                 </p>
                 <p>
                   <a target="_blank" href="https://www.ptsd.va.gov/">
-                    Natinoal Center for PTSD
+                    National Center for PTSD
                   </a>
                 </p>
                 <p>
