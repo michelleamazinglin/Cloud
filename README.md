@@ -82,8 +82,8 @@ displays a function in order to filter out multiple posts with the same body.
 ### Michelle Lin
 [Link to Michelle's Github!](https://github.com/michelleamazinglin)
 
-## Tahmina Nizam
+### Tahmina Nizam
 [Link to Tahmina's Github!](https://github.com/tnizam)
 
-## Christopher Lee
+### Christopher Lee
 [Link to Christopher's Github!](https://github.com/Gogetaspirit)
