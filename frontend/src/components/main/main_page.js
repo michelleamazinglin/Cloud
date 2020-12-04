@@ -1,7 +1,12 @@
 import React from 'react';
-import NavBarContainer from '../nav/navbar_container'
-import '../style/main.css'
-
+import NavBarContainer from '../nav/navbar_container';
+import '../style/main.css';
+import jhiles from '../images/jhiles.png';
+import chris from '../images/chris.png';
+import github from '../images/GitHub.png';
+import michelle from '../images/michelle.png';
+import tahmina from '../images/tahmina.png';
+import miumiu from '../images/miumiu-michelle.png';
 
 class MainPage extends React.Component {
   
@@ -54,10 +59,58 @@ class MainPage extends React.Component {
         </div>
       </section>
       <section id="screen3">
-        <p> this is the page that introduces the 4 of us</p>
-        <p>Thanks for visiting. Signup to join our community &hearts;. Also, enjoy these cats to help you relax .</p>
+
+        <div className="our-face">
+
+          <div className="person">
+            <img src={jhiles} alt="jhiles" className="face"/>
+            <div className="person-discrib">
+              <h3>Jhiles Young</h3>
+              <a href="https://github.com/jhilesyoung">
+                <img src={github} alt="github" width="25px" />
+              </a>
+            </div>
+          </div>
+
+          <div className="person">
+            <img src={chris} alt="chris" className="face"/>
+            <div className="person-discrib">
+              <h3>Christopher Lee</h3>
+              <a href="https://github.com/Gogetaspirit">
+                <img src={github} alt="github" width="25px" />
+              </a>
+            </div>
+          </div>
+          
+          <div className="person">
+            <img src={michelle} alt="michelle" className="face"/>
+            <div className="person-discrib">
+              <h3>Michelle Lin</h3>
+              <a href="https://github.com/michelleamazinglin">
+                <img src={github} alt="github" width="25px" />
+              </a>
+            </div>
+          </div>
+
+          <div className="person">
+            <img src={tahmina} alt="tahmina" className="face"/>
+            <div className="person-discrib">
+              <h3>Tahmina Nizam</h3>
+              <a href="https://github.com/tnizam">
+                <img src={github} alt="github" width="25px" />
+              </a>
+            </div>
+          </div>
+        </div>
+   
+        <p>Thanks for visiting. Signup to join our community &hearts;.</p>
+
         <footer>
           Copyright &copy; 2020 TheCloud
+          <br />
+          <img src={miumiu} alt="miumiu" className="face"/>
+          <br />
+          <p>miumiu - our mascot</p>
         </footer>
       </section>
  

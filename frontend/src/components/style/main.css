@@ -22,6 +22,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #screen2 {
@@ -30,6 +31,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 #screen3 {
@@ -39,6 +41,7 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .main-page-text {
@@ -79,4 +82,34 @@ html {
 .happy-list > ul > li {
     padding: 3px;
 }
+
+.our-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.person {
+    display: flex;
+    flex-direction: row;
+}
+
+.person-discrib {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.face {
+    width: 150px;
+}
+
+footer {
+    text-align: center;
+}
+
+
 
