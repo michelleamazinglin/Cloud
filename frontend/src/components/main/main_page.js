@@ -103,7 +103,7 @@ class MainPage extends React.Component {
           </div>
         </div>
    
-        <p>Thanks for visiting. Signup to join our community &hearts;.</p>
+        <h3>Thanks for visiting. Signup to join our community &hearts;.</h3>
 
         <footer>
           Copyright &copy; 2020 TheCloud
@@ -111,6 +111,10 @@ class MainPage extends React.Component {
           <img src={miumiu} alt="miumiu" className="face"/>
           <br />
           <p>miumiu - our mascot</p>
+          <br />
+          <a href="https://github.com/michelleamazinglin/Cloud">
+            Click here to see Cloudy Mind Repository
+          </a>
         </footer>
       </section>
  
