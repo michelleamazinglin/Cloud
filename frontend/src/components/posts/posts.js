@@ -38,13 +38,17 @@ class Posts extends React.Component {
           return post
         }
       })
+      let shuffled = result.sort(() => 0.5 - Math.random());
+      let selected = shuffled.slice(0, 100)
+
+
       return (
         <div className="post-page">
           <Modal />
           <NavBarContainer />
           <h2>Click on any cloud to see other user's feeling:</h2>
           <div className="cloud-container">
-          {result.map(post => (
+          {selected.map(post => (
             
            <>
             <img src={happy} 
