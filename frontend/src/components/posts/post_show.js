@@ -57,7 +57,8 @@ class PostShow extends React.Component {
           <img src="https://cdn.iconscout.com/icon/free/png-512/back-arrow-1767531-1502435.png" width="30px" height="30px"></img>
           <p>Back to Inbox</p>
         </Link>
-        <h2>{this.state.post.post.data.body}</h2>
+          <h2>{this.state.post.post.data.body}</h2>
+        <h3>Clouds Comments:</h3>
         <ul>
           {this.state.comments.map((comment, idx) => (
             <div>
