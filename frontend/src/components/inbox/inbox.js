@@ -28,7 +28,7 @@ class Inbox extends React.Component {
           this.props.fetchPost(comment.post).then(post => {
             this.props.fetchUser(post.post.data.user).then((user) => {
               let oldArr = this.state.commentedOnPostsBody;
-              let obj = {body: post.post.data.body, username: user.user.data.username}
+              let obj = {body: post.post.data.body, username: user.user.data.username, postId: post.post.data._id}
               let count = 0
             if (oldArr.length < 1) {
               oldArr.push(obj)
@@ -101,9 +101,9 @@ class Inbox extends React.Component {
                 </div>
                 <div className="commented-clouds">
                    <h2>All of commented Clouds</h2>
-                  {this.state.commentedOnPostsBody.map((obj) => (
+                  {this.state.commentedOnPostsBody.map((obj, idx) => (
                       <div>
-                        {obj.username}: {obj.body}
+                      <Link key ={idx} to={`/posts/${obj.postId}`}>{obj.username}: {obj.body}</Link>
                         </div>
                   ))}
                 </div>
@@ -114,7 +114,7 @@ class Inbox extends React.Component {
           return (
             <div className="inbox-page">
               <NavBarContainer />
-              <p className="inbox-intro">start with writing a Cloud or comment on a Cloud ;D</p>
+              <p className="inbox-intro">Initiate Your Inbox By Writing A Cloud!</p>
 
             </div>
             )

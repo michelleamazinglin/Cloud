@@ -20,12 +20,14 @@ class CommentBox extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
+        
         let comment = Object.assign({}, this.state);
         this.props.createComment(comment).then(() =>{
             this.setState({
                 commentBody: ''
             })
         })
+        this.props.closeModal()
     }
 
     render(){

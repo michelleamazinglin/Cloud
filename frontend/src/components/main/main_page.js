@@ -59,6 +59,7 @@ class MainPage extends React.Component {
         </div>
       </section>
       <section id="screen3">
+
         <div className="our-face">
 
           <div className="person">
@@ -103,6 +104,7 @@ class MainPage extends React.Component {
         </div>
    
         <p>Thanks for visiting. Signup to join our community &hearts;.</p>
+
         <footer>
           Copyright &copy; 2020 TheCloud
           <br />
