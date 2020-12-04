@@ -1,5 +1,6 @@
 import React from 'react';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import { Route } from 'react-router-dom';
 import { Switch } from 'react-router-dom';
 import LiveChat from './livechat/livechat';
 import PostsContainer from './posts/posts_container';
@@ -24,7 +25,7 @@ const App = () => (
       <ProtectedRoute exact path="/inbox" component={InboxContainer} />
       <ProtectedRoute exact path="/new_post" component={PostComposeContainer} />
       <ProtectedRoute exact path= "/posts/:postId" component={PostShow} />
-      <ProtectedRoute exact path="/resources" component={Resources} />
+      <Route path="/resources" component={Resources} />
       {/* <ProtectedRoute exact path="/posts" component={Player} /> */}
     </Switch>
     <LiveChat />
