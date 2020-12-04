@@ -28,7 +28,7 @@ class LiveChat extends Component {
 
     // let userResponses = ["resources", "resource", "hi", "Hi"]
 
-    if (newMessage === ("resources" || "Resources")) {
+    if (newMessage === "resources") {
         response = addLinkSnippet(resourceLinks)
         // addResponseMessage(response)
     } else  {
@@ -43,9 +43,9 @@ class LiveChat extends Component {
     
       const titleMessage = "Are You Feeling Cloudy Today?"
       const subTitleMessage = "Let's chat about it"
-      const senderPlaceHolder = "Type 'Resources' or 'Hi' for instructions"
+      const senderPlaceHolder = "Type 'resources' or 'hi' for instructions"
     return (
-      <div className="livechat">
+      <div >
         <Chat
           handleNewUserMessage={this.handleNewUserMessage}
           profileAvatar={logo}
