@@ -1,6 +1,7 @@
 .post-show-page {
     background-color: #85DCC6;
     min-height: 100vh;
+    color: #0F2E44;
 }
 
 .back-to-inbox {
@@ -37,6 +38,7 @@
     align-items: center;
     justify-content: center;
     overflow: auto;
+    color: black;
 }
 
 .post-show-page > h3 {

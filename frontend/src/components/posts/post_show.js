@@ -58,7 +58,7 @@ class PostShow extends React.Component {
           <p>Back to Inbox</p>
         </Link>
           <h2>{this.state.post.post.data.body}</h2>
-        <h3>Clouds Comments:</h3>
+        <h3>Clouds Comments, Click to reply:</h3>
         <ul>
           {this.state.comments.map((comment, idx) => (
             <div>
