@@ -25,7 +25,7 @@ class NavBar extends React.Component {
             <nav className="nav-when-log-in">
                 <Link to={'/posts'}>All Clouds</Link>
                 <Link to={'/inbox'}>Inbox</Link>
-                <Link to={'/new_post'}>Write a Post</Link>
+                <Link to={'/new_post'}>Write a Cloud</Link>
                 <Link to={`/resources`}>Resources</Link>
                 <button onClick={this.logoutUser}>Logout</button>
             </nav>
