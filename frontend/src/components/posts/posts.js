@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import NavBarContainer from '../nav/navbar_container';
 import Modal from '../modal/modal';
 import happy from '../images/happy_cloud.png';
+import skyline from '../images/skyline.png';
 import '../style/posts_page.css'
 
 
@@ -58,6 +59,11 @@ class Posts extends React.Component {
               />
              </> 
           ))}
+          </div>
+          <div className="skylines">
+           <img src={skyline} alt="logo" className="skyline"/>
+           <img src={skyline} alt="logo" className="skyline"/>
+           <img src={skyline} alt="logo" className="skyline"/>
           </div>
         </div>
       );
