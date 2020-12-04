@@ -16,13 +16,13 @@ class LiveChat extends Component {
 
     let resourceLinks = {
         title: 'Click here for immediate help',
-        link: 'cloudymind-herokuapp.com/resources',
+        link: '#/resources',
         target: '_blank'
     }
     
     let hiResponse = {
         title: 'As much as I would like to chat, you should share your thoughts with others in the cloud. Click here to get started',
-        link: 'cloudymind-herokuapp.com/signup',
+        link: '#/signup',
         target: '_blank'
     }
 
