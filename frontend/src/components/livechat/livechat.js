@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Chat, addResponseMessage, addLinkSnippet, addUserMessage } from 'react-chat-popup';
+// https://www.npmjs.com/package/react-chat-popup
 import logo from '../images/sun_icon.png';
  
 class LiveChat extends Component {

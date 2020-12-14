@@ -22,13 +22,22 @@ class Inbox extends React.Component {
     }
     
     componentWillMount() {
+      // so little time we did great, we dont have ttim to change schema so this is the way we find username without resracture everything.
         this.props.fetchUserPosts(this.props.currentUser.id)
+        // ⬇ dont do it next time
         this.props.fetchUserComments(this.props.currentUser.id).then(comments => {
         comments.comments.data.forEach(comment => {
+          // for each comment we fetch post of comment
           this.props.fetchPost(comment.post).then(post => {
+            // for each post, we fetch the user of the post
             this.props.fetchUser(post.post.data.user).then((user) => {
+              // then for the user
+              // oldArr = arr for all users commented on that post
               let oldArr = this.state.commentedOnPostsBody;
+              // ⬇ everything we want to display on the page
               let obj = {body: post.post.data.body, username: user.user.data.username, postId: post.post.data._id}
+              // ⬇ make sure no duplicate
+              // making muti ajax is bad for runtime (not good pratice)
               let count = 0
             if (oldArr.length < 1) {
               oldArr.push(obj)
