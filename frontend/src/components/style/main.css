@@ -112,5 +112,7 @@ footer {
     margin-top: 40px;
 }
 
-
+.job-icons > a {
+    margin: 3px;
+}
 
