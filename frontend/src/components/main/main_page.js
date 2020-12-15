@@ -93,7 +93,7 @@ class MainPage extends React.Component {
               <a target="_blank" href="https://www.linkedin.com/in/christopher-lee-7b48b6134/">
                   <img src={link} alt="" width="25px" />
               </a>
-              <a target="_blank" href="#">
+              <a target="_blank" href="https://angel.co/u/christopher-lee-133">
                   <img src={angel} alt="" width="25px" />
               </a> 
               </div>
