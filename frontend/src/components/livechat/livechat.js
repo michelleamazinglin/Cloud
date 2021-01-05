@@ -11,7 +11,7 @@ class LiveChat extends Component {
   
  
   handleNewUserMessage = (newMessage) => {
-    console.log(`New message incoming! ${newMessage}`);
+    // console.log(`New message incoming! ${newMessage}`);
     // Now send the message throught the backend API
     let response = ""
 

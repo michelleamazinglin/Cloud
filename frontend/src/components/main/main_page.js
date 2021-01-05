@@ -7,6 +7,8 @@ import github from '../images/GitHub.png';
 import michelle from '../images/michelle.png';
 import tahmina from '../images/tahmina.png';
 import miumiu from '../images/miumiu-michelle.png';
+import link from '../images/link.png';
+import angel from '../images/angelist.png';
 
 class MainPage extends React.Component {
   
@@ -26,7 +28,7 @@ class MainPage extends React.Component {
         <div className="happy-list">
           <div>
              <h1>How to Be Happy: 25 Habits to Add to Your Routine</h1>
-             <p>credit to <a href = 'https://www.healthline.com/health/how-to-be-happy'>Medically reviewed by Timothy J. Legg, Ph.D., CRNP — Written by Ann Pietrangelo on January 15, 2019</a></p>
+             <p>credit to <a target="_blank" href = 'https://www.healthline.com/health/how-to-be-happy'>Medically reviewed by Timothy J. Legg, Ph.D., CRNP — Written by Ann Pietrangelo on January 15, 2019</a></p>
           </div>
          
           <ul>
@@ -66,9 +68,17 @@ class MainPage extends React.Component {
             <img src={jhiles} alt="jhiles" className="face"/>
             <div className="person-discrib">
               <h3>Jhiles Young</h3>
-              <a href="https://github.com/jhilesyoung">
-                <img src={github} alt="github" width="25px" />
-              </a>
+              <div className="job-icons">
+                <a target="_blank" href="https://github.com/jhilesyoung">
+                  <img src={github} alt="github" width="25px" />
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/jhilesyoung/">
+                    <img src={link} alt="" width="25px" />
+                </a>
+                <a target="_blank" href="https://angel.co/u/jhilesyoung-gmail-com">
+                    <img src={angel} alt="" width="25px" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -76,9 +86,17 @@ class MainPage extends React.Component {
             <img src={chris} alt="chris" className="face"/>
             <div className="person-discrib">
               <h3>Christopher Lee</h3>
-              <a href="https://github.com/Gogetaspirit">
+              <div className="job-icons">
+              <a target="_blank" href="https://github.com/Gogetaspirit">
                 <img src={github} alt="github" width="25px" />
               </a>
+              <a target="_blank" href="https://www.linkedin.com/in/christopher-lee-7b48b6134/">
+                  <img src={link} alt="" width="25px" />
+              </a>
+              <a target="_blank" href="https://angel.co/u/christopher-lee-133">
+                  <img src={angel} alt="" width="25px" />
+              </a> 
+              </div>
             </div>
           </div>
           
@@ -86,9 +104,17 @@ class MainPage extends React.Component {
             <img src={michelle} alt="michelle" className="face"/>
             <div className="person-discrib">
               <h3>Michelle Lin</h3>
-              <a href="https://github.com/michelleamazinglin">
-                <img src={github} alt="github" width="25px" />
-              </a>
+              <div className="job-icons">
+                <a target="_blank" href="https://github.com/michelleamazinglin">
+                  <img src={github} alt="github" width="25px" />
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/michelle-lin-9b9b8614b/">
+                  <img src={link} alt="" width="25px" />
+                </a>
+                <a target="_blank" href="https://angel.co/u/michelle-lin-29">
+                    <img src={angel} alt="" width="25px" />
+                </a>       
+              </div>
             </div>
           </div>
 
@@ -96,9 +122,17 @@ class MainPage extends React.Component {
             <img src={tahmina} alt="tahmina" className="face"/>
             <div className="person-discrib">
               <h3>Tahmina Nizam</h3>
-              <a href="https://github.com/tnizam">
-                <img src={github} alt="github" width="25px" />
-              </a>
+              <div className="job-icons">
+                <a target="_blank" href="https://github.com/tnizam">
+                  <img src={github} alt="github" width="25px" />
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/tahminanizam/">
+                    <img src={link} alt="" width="25px" />
+                </a>
+                <a target="_blank" href="https://angel.co/u/tahmina-nizam">
+                    <img src={angel} alt="" width="25px" />
+                </a>     
+              </div>
             </div>
           </div>
         </div>
@@ -112,7 +146,7 @@ class MainPage extends React.Component {
           <br />
           <p>miumiu - our mascot</p>
           <br />
-          <a href="https://github.com/michelleamazinglin/Cloud">
+          <a target="_blank" href="https://github.com/michelleamazinglin/Cloud">
             Click here to see Cloudy Mind Repository
           </a>
         </footer>
