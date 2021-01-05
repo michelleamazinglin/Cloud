@@ -48,7 +48,9 @@ class SignupForm extends React.Component {
     }
 
     this.props.signup(user, this.props.history).then(() => {
-      this.props.login(loginUser)
+      if (this.props.signedIn === true) {
+        this.props.login(loginUser)
+      }
     })
   }
 
