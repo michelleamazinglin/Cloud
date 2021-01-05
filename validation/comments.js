@@ -5,9 +5,9 @@ module.exports = function validateCommentInput(data) {
     let errors = {};
     data.commentBody = validText(data.commentBody) ? data.commentBody : '';
 
-    if (!Validator.isLength(data.commentBody, { min: 5, max: 140 })) {
-        errors.commentBody = 'Comment must be between 5 and 140 characters';
-    }
+    // if (!Validator.isLength(data.commentBody, { min: 5, max: 140 })) {
+    //     errors.commentBody = 'Comment must be between 5 and 140 characters';
+    // }
 
     if (Validator.isEmpty(data.commentBody)) {
         errors.commentBody = 'Comment field is required';
