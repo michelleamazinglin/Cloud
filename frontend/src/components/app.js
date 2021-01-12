@@ -12,6 +12,7 @@ import PostComposeContainer from './posts/post_compose_container';
 import PostShow from './posts/post_show';
 import Player from './player/player';
 import Resources from './resources/resources';
+import About from './aboutUs/about_container'
 
 const App = () => (
   <div>
@@ -26,6 +27,7 @@ const App = () => (
       <ProtectedRoute exact path="/new_post" component={PostComposeContainer} />
       <ProtectedRoute exact path= "/posts/:postId" component={PostShow} />
       <Route path="/resources" component={Resources} />
+      <Route path="/about_us" component={About} />
       {/* <ProtectedRoute exact path="/posts" component={Player} /> */}
     </Switch>
     <LiveChat />
