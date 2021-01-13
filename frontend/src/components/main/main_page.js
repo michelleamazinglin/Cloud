@@ -87,7 +87,7 @@ class MainPage extends React.Component {
             <div className="person-discrib">
               <h3>Christopher Lee</h3>
               <div className="job-icons">
-              <a target="_blank" href="https://github.com/Gogetaspirit">
+                  <a target="_blank" href="https://github.com/clee1996">
                 <img src={github} alt="github" width="25px" />
               </a>
               <a target="_blank" href="https://www.linkedin.com/in/christopher-lee-7b48b6134/">
